@@ -1,0 +1,16 @@
+.leader-container {
+
+
+    height: 100vh;
+    margin-top: 10rem;
+    margin-right: 3rem;
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem;
+    font-family: "Alata", serif;
+    font-style: normal;
+    position: relative;
+    
+
+}

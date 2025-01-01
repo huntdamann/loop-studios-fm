@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+    .menu-container {
+       @apply bg-black w-full fixed transition-all md:hidden overflow-hidden h-full top-0 left-0 p-[3rem] z-[46];
+    }
+    .hide {
+        @apply hidden;
+    }
+    .desktop-menu {
+        @apply hidden;
+    }
+}

@@ -1,0 +1,13 @@
+.social-handles {
+    color: white;
+    display: flex;
+    gap: 1.5rem;
+    
+    justify-content: center;
+}
+.copy {
+    color: gray;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
