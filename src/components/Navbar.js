@@ -60,7 +60,7 @@ export default function Navbar() {
           <RemoveScroll enabled={isMenuOpen? true: false}>
             <ExitToAppIcon style={{opacity: isMenuOpen? '1': '0'}} className='absolute top-8 right-6' />
             
-            <div className='absolute flex flex-col font-[100] uppercase gap-5 text-3xl top-[12rem]'>
+            <div className='absolute flex flex-col cursor-pointer font-[100] uppercase gap-5 text-3xl top-[12rem]'>
             <li>About</li>
             <li>Careers</li>
             <li>Events</li>
@@ -71,7 +71,7 @@ export default function Navbar() {
            
         </ul>
         <ul className="hidden md:flex">
-        <div className='absolute flex font-[100] uppercase gap-5 text-1xl top-[1rem]'>
+        <div className='absolute flex font-[100] cursor-pointer uppercase gap-5 text-1xl top-[1rem]'>
             <li>About</li>
             <li>Careers</li>
             <li>Events</li>

@@ -5,6 +5,8 @@ import LeadPictureDesktop from '../images/desktop/image-interactive.jpg'
 import useMediaQuery from './hooks/useMediaQuery.js';
 import './Leader.css'
 
+import { motion } from 'motion/react'
+
 
 export default function Leader() {
 
@@ -18,7 +20,7 @@ export default function Leader() {
         <img src={isDesktop? LeadPictureDesktop : LeadPicture} alt="Interactive Photo" />
 
         </div>
-        <div className="flex flex-col md:absolute bg-white md:h-[30rem] md:left-[50rem] md:top-[12rem] md:p-6 justify-center items-center gap-4">
+        <motion.div initial={{opacity: 0, x: 60}} whileInView={{opacity: 1, x: 0}} viewport={{amount: 1}} className="flex flex-col md:absolute bg-white md:h-[30rem] md:left-[50rem] md:top-[12rem] md:p-6 justify-center items-center gap-4">
 
 
             <h2 className="text-center uppercase font-[100] text-4xl">The Leader in Interactive VR</h2>
@@ -30,7 +32,7 @@ export default function Leader() {
                 to their brand.  
             </span>
             
-        </div>
+        </motion.div>
         
 
 

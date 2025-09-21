@@ -7,25 +7,27 @@ import backgroundDesktop from '../images/desktop/image-hero.jpg'
 import { cn } from "../lib/utils";
 import { useEffect, useRef, useState } from "react";
 import useMediaQuery from './hooks/useMediaQuery.js';
+
+
+import { motion } from 'motion/react'
 export default function Hero() {
 
     const isDesktop = useMediaQuery('(min-width:460px)');
     return(
         <div className="hero-container">
-                {/*<img className="picture" src={background} alt="Hero" /> */}
 
                 <BackgroundGradientAnimation>
                     <div className="absolute z-40 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl">
                     <img className="picture" src= {isDesktop ? backgroundDesktop : background} alt="Hero" />
                     </div>
-                    <ul className='border-4 tracking-widest  uppercase absolute md:w-[30rem] w-[20rem] top-[15rem] md:left-[10rem] left-[0.5rem] m-5 md:p-10 p-4 text-2xl z-[45] text-white border-white '>
-                        <li>Immersive</li>
-                        <li>Experiences</li>
-                        <li>That</li>
-                        <li>Deliver</li>
-                    </ul>
+                    <motion.ul initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 0.5}} className='border-4 tracking-widest  uppercase absolute md:w-[30rem] w-[20rem] top-[15rem] md:left-[10rem] left-[0.5rem] m-5 md:p-10 p-4 text-2xl z-[45] text-white border-white '>
+                        <motion.li initial={{x: 100, opacity: 0}} animate={{x: 0, opacity: 1}} transition={{delay: 0.7}}>Immersive</motion.li>
+                        <motion.li initial={{y: 50, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{delay: 0.7}}>Experiences</motion.li>
+                        <motion.li initial={{x: 100, opacity: 0}} animate={{x: 0, opacity: 1}} transition={{delay: 0.7}}>That</motion.li>
+                        <motion.li initial={{y: 50, opacity: 0}} animate={{y: 0, opacity: 1}} transition={{delay: 0.7}}>Deliver</motion.li>
+                    </motion.ul>
                 </BackgroundGradientAnimation>
-            <span></span>
+          
         </div>
     )
 
